@@ -1,41 +1,48 @@
-def dijkstra(nodos, conexiones, inicio, fin):
-    # Inicializar los costos mínimos y los padres de los nodos
-    costos = {nodo: float('inf') for nodo in nodos}
-    padres = {nodo: None for nodo in nodos}
-    costos[inicio] = 0
-    
-    # Algoritmo de Dijkstra
-    nodos_visitados = []
-    while nodos_visitados != nodos:
-        nodo_actual = min((nodo for nodo in nodos if nodo not in nodos_visitados), key=lambda x: costos[x])
-        nodos_visitados.append(nodo_actual)
-        for vecino, peso in conexiones[nodo_actual].items():
-            nuevo_costo = costos[nodo_actual] + peso
-            if nuevo_costo < costos[vecino]:
-                costos[vecino] = nuevo_costo
-                padres[vecino] = nodo_actual
-    
-    # Construir el camino mínimo
-    camino = [fin]
-    while camino[-1] != inicio:
-        camino.append(padres[camino[-1]])
-    camino.reverse()
-    return camino
+import heapq
 
-# Definir nodos y conexiones
-nodos = ['1', '2', '3', '4', '5', '6', '7']
-conexiones = {
-    '1': {'2': 125, '3': 513},
-    '2': {'1': 125, '3': 616},
-    '3': {'1': 513, '2': 616, '4': 962, '5': 716, '6': 925},
-    '4': {'3': 962},
-    '5': {'3': 716, '6': 826},
-    '6': {'3': 925, '5': 826, '7': 950},
-    '7': {'6': 950}
+def dijkstra(graph, start):
+    distances = {node: float('infinity') for node in graph}
+    distances[start] = 0
+    queue = [(0, start)]
+    previous_nodes = {}
+
+    while queue:
+        current_distance, current_node = heapq.heappop(queue)
+
+        if current_distance > distances[current_node]:
+            continue
+
+        for neighbor, weight in graph[current_node].items():
+            distance = current_distance + weight
+            if distance < distances[neighbor]:
+                distances[neighbor] = distance
+                heapq.heappush(queue, (distance, neighbor))
+                previous_nodes[neighbor] = current_node
+
+    return previous_nodes
+
+def shortest_path(graph, start, end):
+    previous_nodes = dijkstra(graph, start)
+    path = []
+    current_node = end
+
+    while current_node != start:
+        path.insert(0, current_node)
+        current_node = previous_nodes[current_node]
+
+    path.insert(0, start)
+    return path
+
+graph = {
+    1: {2: 4},
+    2: {3: 2},
+    3: {5: 4},
+    5: {7: 20},
+    7: {}
 }
 
-# Calcular el camino mínimo del nodo 1 al nodo 7
-inicio = '1'
-fin = '7'
-camino_minimo = dijkstra(nodos, conexiones, inicio, fin)
-print("Camino mínimo del nodo 1 al nodo 7:", camino_minimo)
+start_node = 1
+end_node = 7
+shortest_path_nodes = shortest_path(graph, start_node, end_node)
+
+print("Camino más corto:", shortest_path_nodes)
