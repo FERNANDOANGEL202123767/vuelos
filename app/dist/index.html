@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
+<!-- saved from url=(0022)http://127.0.0.1:5000/ -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard de Algoritmos - Resultados</title>
     <style>
@@ -319,7 +319,7 @@
         
         <div class="results-grid">
             <!-- DFS Results Card -->
-            <div class="result-card">
+            <div class="result-card" style="transform: translateY(0px) scale(1);">
                 <div class="card-header">
                     <div class="card-icon dfs-icon">🌳</div>
                     <div>
@@ -328,16 +328,14 @@
                     </div>
                 </div>
                 <div class="result-content">
-                    <div class="array-visualization" id="dfs-visualization">
-                        <!-- Los pasos del DFS se cargarán aquí -->
-                    </div>
+                    <div class="array-visualization" id="dfs-visualization"><div class="array-step initial " style="animation-delay: 0s;">[4, 2, 3, 1]</div><div class="arrow">→</div><div class="array-step  " style="animation-delay: 0.2s;">[4, 2, 1, 3]</div><div class="arrow">→</div><div class="array-step  " style="animation-delay: 0.4s;">[4, 1, 2, 3]</div><div class="arrow">→</div><div class="array-step  " style="animation-delay: 0.6s;">[4, 1, 3, 2]</div><div class="arrow">→</div><div class="array-step  " style="animation-delay: 0.8s;">[4, 3, 1, 2]</div><div class="arrow">→</div><div class="array-step  " style="animation-delay: 1s;">[3, 4, 1, 2]</div><div class="arrow">→</div><div class="array-step  " style="animation-delay: 1.2s;">[3, 4, 2, 1]</div><div class="arrow">→</div><div class="array-step  " style="animation-delay: 1.4s;">[3, 2, 4, 1]</div><div class="arrow">→</div><div class="array-step  " style="animation-delay: 1.6s;">[3, 2, 1, 4]</div><div class="arrow">→</div><div class="array-step  " style="animation-delay: 1.8s;">[3, 1, 2, 4]</div><div class="arrow">→</div><div class="array-step  " style="animation-delay: 2s;">[1, 3, 2, 4]</div><div class="arrow">→</div><div class="array-step  final" style="animation-delay: 2.2s;">[1, 2, 3, 4]</div></div>
                     <div class="sequence-info">
                         <h4>Secuencia de Transformaciones:</h4>
                         <p>El algoritmo DFS explora cada estado posible hasta encontrar la solución óptima mediante intercambios sistemáticos.</p>
                     </div>
                     <div class="stats-row">
                         <div class="stat-item">
-                            <div class="stat-value" id="dfs-steps">0</div>
+                            <div class="stat-value" id="dfs-steps">12</div>
                             <div class="stat-label">Pasos</div>
                         </div>
                         <div class="stat-item">
@@ -353,7 +351,7 @@
             </div>
             
             <!-- Puzzle Results Card -->
-            <div class="result-card">
+            <div class="result-card" style="transform: translateY(-10px) scale(1.02);">
                 <div class="card-header">
                     <div class="card-icon puzzle-icon">🧩</div>
                     <div>
@@ -362,16 +360,14 @@
                     </div>
                 </div>
                 <div class="result-content">
-                    <div class="array-visualization" id="puzzle-visualization">
-                        <!-- Los pasos del puzzle se cargarán aquí -->
-                    </div>
+                    <div class="array-visualization" id="puzzle-visualization"><div class="array-step initial " style="animation-delay: 0s;">[4, 2, 3, 1]</div><div class="arrow">→</div><div class="array-step  " style="animation-delay: 0.2s;">[2, 4, 3, 1]</div><div class="arrow">→</div><div class="array-step  " style="animation-delay: 0.4s;">[2, 3, 4, 1]</div><div class="arrow">→</div><div class="array-step  " style="animation-delay: 0.6s;">[2, 3, 1, 4]</div><div class="arrow">→</div><div class="array-step  " style="animation-delay: 0.8s;">[2, 1, 3, 4]</div><div class="arrow">→</div><div class="array-step  final" style="animation-delay: 1s;">[1, 2, 3, 4]</div></div>
                     <div class="sequence-info">
                         <h4>Resolución BFS:</h4>
                         <p>Búsqueda por niveles que garantiza encontrar la solución con el menor número de movimientos posibles.</p>
                     </div>
                     <div class="stats-row">
                         <div class="stat-item">
-                            <div class="stat-value" id="puzzle-steps">0</div>
+                            <div class="stat-value" id="puzzle-steps">6</div>
                             <div class="stat-label">Pasos</div>
                         </div>
                         <div class="stat-item">
@@ -387,7 +383,7 @@
             </div>
             
             <!-- Flight Search Results Card -->
-            <div class="result-card">
+            <div class="result-card" style="transform: translateY(0px) scale(1);">
                 <div class="card-header">
                     <div class="card-icon flights-icon">✈️</div>
                     <div>
@@ -396,12 +392,19 @@
                     </div>
                 </div>
                 <div class="result-content">
-                    <div class="nodes-container" id="visited-nodes">
-                        <!-- Los nodos visitados se cargarán aquí -->
-                    </div>
+                    <div class="nodes-container" id="visited-nodes"><div class="node-item" style="animation-delay: 0s;">
+                    <div class="node-number">1</div>
+                    <div>EDO.MEX</div>
+                </div><div class="node-item" style="animation-delay: 0.1s;">
+                    <div class="node-number">2</div>
+                    <div>SONORA</div>
+                </div><div class="node-item" style="animation-delay: 0.2s;">
+                    <div class="node-number">3</div>
+                    <div>MONTERREY</div>
+                </div></div>
                     <div class="stats-row">
                         <div class="stat-item">
-                            <div class="stat-value" id="nodes-count">0</div>
+                            <div class="stat-value" id="nodes-count">3</div>
                             <div class="stat-label">Nodos Visitados</div>
                         </div>
                         <div class="stat-item">
@@ -417,7 +420,7 @@
             </div>
             
             <!-- Dijkstra Results Card -->
-            <div class="result-card">
+            <div class="result-card" style="transform: translateY(0px) scale(1);">
                 <div class="card-header">
                     <div class="card-icon dijkstra-icon">🗺️</div>
                     <div>
@@ -427,9 +430,7 @@
                 </div>
                 <div class="result-content">
                     <div class="path-visualization">
-                        <div class="path-steps" id="shortest-path">
-                            <!-- El camino más corto se cargará aquí -->
-                        </div>
+                        <div class="path-steps" id="shortest-path"><div class="path-node">1</div><div class="path-arrow">→</div><div class="path-node">2</div><div class="path-arrow">→</div><div class="path-node">3</div><div class="path-arrow">→</div><div class="path-node">5</div><div class="path-arrow">→</div><div class="path-node">7</div></div>
                     </div>
                     <div class="sequence-info">
                         <h4>Detalles del Camino:</h4>
@@ -437,7 +438,7 @@
                     </div>
                     <div class="stats-row">
                         <div class="stat-item">
-                            <div class="stat-value" id="path-nodes">0</div>
+                            <div class="stat-value" id="path-nodes">5</div>
                             <div class="stat-label">Nodos</div>
                         </div>
                         <div class="stat-item">
@@ -523,30 +524,30 @@
         // Función principal para cargar datos desde Flask
         function loadDataFromFlask() {
             // DFS Results
-            {% if resultado_dfs %}
-                const dfsResults = {{ resultado_dfs | tojson }};
+            
+                const dfsResults = [[4, 2, 3, 1], [4, 2, 1, 3], [4, 1, 2, 3], [4, 1, 3, 2], [4, 3, 1, 2], [3, 4, 1, 2], [3, 4, 2, 1], [3, 2, 4, 1], [3, 2, 1, 4], [3, 1, 2, 4], [1, 3, 2, 4], [1, 2, 3, 4]];
                 renderArraySequence('dfs-visualization', dfsResults);
                 document.getElementById('dfs-steps').textContent = dfsResults.length;
-            {% endif %}
+            
             
             // Puzzle Results
-            {% if resultado_puzzle %}
-                const puzzleResults = {{ resultado_puzzle | tojson }};
+            
+                const puzzleResults = [[4, 2, 3, 1], [2, 4, 3, 1], [2, 3, 4, 1], [2, 3, 1, 4], [2, 1, 3, 4], [1, 2, 3, 4]];
                 renderArraySequence('puzzle-visualization', puzzleResults);
                 document.getElementById('puzzle-steps').textContent = puzzleResults.length;
-            {% endif %}
+            
             
             // Visited Nodes
-            {% if nodos_visitados %}
-                const visitedNodes = {{ nodos_visitados | tojson }};
+            
+                const visitedNodes = ["EDO.MEX", "SONORA", "MONTERREY"];
                 renderVisitedNodes(visitedNodes);
-            {% endif %}
+            
             
             // Shortest Path
-            {% if shortest_path_nodes %}
-                const shortestPath = {{ shortest_path_nodes | tojson }};
+            
+                const shortestPath = [1, 2, 3, 5, 7];
                 renderShortestPath(shortestPath);
-            {% endif %}
+            
         }
         
         // Efectos de hover mejorados
@@ -565,5 +566,5 @@
             });
         });
     </script>
-</body>
-</html>
+
+</body></html>
