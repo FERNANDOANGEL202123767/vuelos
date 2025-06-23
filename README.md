@@ -4,6 +4,8 @@
 
 **Vuelos** es un proyecto educativo que implementa y visualiza algoritmos de búsqueda y optimización a través de un dashboard interactivo. El sistema demuestra el funcionamiento de diferentes algoritmos aplicados a problemas prácticos como la resolución de puzzles y búsqueda de rutas.
 
+🌐 **[Ver Demo en Vivo](https://jazzy-swan-ed5c4c.netlify.app/)**
+
 ### Algoritmos Implementados:
 - **DFS (Búsqueda en Profundidad)**: Resolución de puzzle lineal [4, 2, 3, 1] → [1, 2, 3, 4]
 - **BFS (Búsqueda en Anchura)**: Resolución del mismo puzzle con enfoque por niveles
@@ -74,6 +76,9 @@ vuelos/
 5. **Abrir en navegador**: http://127.0.0.1:5000/
 
 ## 🎯 Uso
+
+### 🌐 Demo en Línea
+Puedes ver el dashboard funcionando sin instalación en: **[https://jazzy-swan-ed5c4c.netlify.app/](https://jazzy-swan-ed5c4c.netlify.app/)**
 
 ### Dashboard Interactivo
 
